@@ -39,7 +39,10 @@ The blue-violet halo, filaments, lensing arcs, and particles in this film are a
 visual metaphor for an inferred gravitational mass distribution. Their colors,
 particle sizes, camera motion, and time evolution are artistic choices.
 
-
+Primary data and paper:
+- SPARC data: https://astroweb.case.edu/SPARC/
+- Lelli, McGaugh & Schombert (2016), AJ 152, 157
+- VizieR catalog J/AJ/152/157
 
 INSTALL
 -------
