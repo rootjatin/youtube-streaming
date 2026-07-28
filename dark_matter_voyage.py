@@ -71,6 +71,7 @@ CUSTOM DURATION / RESOLUTION
 
 USE YOUR OWN MUSIC INSTEAD OF THE GENERATED SOUNDTRACK
 ------------------------------------------------------
+    #use wav music
     DARK_MATTER_AUDIO=/path/to/music.wav python dark_matter_the_silent_architecture.py
 
 Force a fresh SPARC download:
