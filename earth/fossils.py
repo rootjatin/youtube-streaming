@@ -14,7 +14,51 @@ There are NO graphs, plots, axes, dashboards, or classroom-style data cards.
 Information appears only through restrained documentary captions, specimen
 labels, cinematic reconstructions, and brief evidence statements.
 
+REAL-EVIDENCE FOUNDATION
+------------------------
+The renderer uses a curated set of measurements and conclusions from primary
+palaeontological research:
 
+- Fossil trackways provide direct evidence of gait, speed, and distal limb
+  motion, although substrate and preservation complicate interpretation.
+- An oviraptorid was preserved over a nest of eggs in a posture closely
+  resembling brooding birds.
+- A large tyrannosaur coprolite contained approximately 30–50% bone fragments,
+  preserving direct evidence of diet and digestive processing.
+- A Triceratops pathology study found a non-random distribution of healed
+  cranial injuries consistent with intraspecific horn combat; the authors
+  explicitly cautioned that individual lesions cannot be assigned a precise
+  cause.
+- An adult Oryctodromeus and two juveniles were preserved in the expanded end
+  chamber of a sediment-filled burrow, providing direct evidence of burrowing
+  and an association interpreted as extensive parental care.
+- Fossil melanosomes indicate that Microraptor possessed black, iridescent
+  plumage. A display function is plausible, but remains an inference.
+
+PRIMARY REFERENCES
+------------------
+- Falkingham, P. L. (2025), Reconstructing dinosaur locomotion.
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC11732409/
+- Norell et al. (1995), A nesting dinosaur, Nature 378, 774–776.
+  https://doi.org/10.1038/378774a0
+- Chin et al. (1998), A king-sized theropod coprolite, Nature 393, 680–682.
+  https://doi.org/10.1038/31461
+- Farke, Wolff & Tanke (2009), Evidence of Combat in Triceratops.
+  https://doi.org/10.1371/journal.pone.0004252
+- Varricchio, Martin & Katsura (2007), First trace and body fossil evidence of
+  a burrowing, denning dinosaur.
+  https://doi.org/10.1098/rspb.2006.0443
+- Li et al. (2012), Reconstruction of Microraptor and the evolution of
+  iridescent plumage, Science 335, 1215–1219.
+  https://doi.org/10.1126/science.1213780
+
+SCIENTIFIC HONESTY
+------------------
+The numerical records and published interpretations are real. The animals,
+landscapes, colours, poses, camera movements, sediment, lighting, and sequence
+of events are procedural artistic visualisations. A fossil preserves evidence;
+it rarely preserves a complete explanation. The film distinguishes direct
+observations from interpretations whenever possible.
 
 INSTALL
 -------
@@ -1049,6 +1093,7 @@ def render_video(scene: FossilBehaviourDocumentary) -> Path:
         shutil.copyfile(raw_path, final_path)
     return final_path
 
+
 def main() -> None:
     print("Starting FOSSILS: BEHAVIOUR WRITTEN IN STONE")
     print("Quick mode:", QUICK_MODE)
@@ -1077,5 +1122,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
