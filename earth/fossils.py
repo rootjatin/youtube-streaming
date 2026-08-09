@@ -1049,5 +1049,33 @@ def render_video(scene: FossilBehaviourDocumentary) -> Path:
         shutil.copyfile(raw_path, final_path)
     return final_path
 
+def main() -> None:
+    print("Starting FOSSILS: BEHAVIOUR WRITTEN IN STONE")
+    print("Quick mode:", QUICK_MODE)
+    print("Preview only:", PREVIEW_ONLY)
+    print(f"Duration: {DURATION:.1f} seconds")
+    print("Graphs included: no")
+    print("Evidence chapters:", ", ".join(record.specimen for record in EVIDENCE.values()))
+    metadata_path, manifest_path = write_metadata()
+    print("YouTube metadata:", metadata_path.resolve())
+    print("Render manifest:", manifest_path.resolve())
+    scene = FossilBehaviourDocumentary()
+    preview_paths = render_previews(scene)
+    contact_sheet = create_contact_sheet(preview_paths)
+    if contact_sheet:
+        print("Contact sheet:", contact_sheet.resolve())
+    if not PREVIEW_ONLY:
+        final_path = render_video(scene)
+        print("Final film:", final_path.resolve())
+    else:
+        print("Preview-only mode complete; no movie was encoded.")
+    print("Output directory:", OUTPUT_ROOT.resolve())
+    for path in sorted(OUTPUT_ROOT.rglob("*")):
+        if path.is_file():
+            print("-", path.relative_to(OUTPUT_ROOT))
+
+
+if __name__ == "__main__":
+    main()
 
 
