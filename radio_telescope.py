@@ -4,6 +4,23 @@ from __future__ import annotations
 RADIO TELESCOPE + FOURIER TRANSFORM — A Very Easy Visual Explainer
 ===================================================================
 
+A self-contained, cinematic Python renderer inspired by a shot-based astronomy
+short workflow. It explains, visually and with beginner-friendly captions:
+
+1) Radio light is just light with a long wavelength.
+2) A dish collects weak radio waves and focuses them into a receiver.
+3) A single dish has limited angular resolution: theta ~ 1.22 lambda / D.
+4) Two dishes receive the same wave at slightly different times/phases.
+5) A correlator compares those signals and produces a "visibility".
+6) Each antenna pair (baseline) measures one piece of the sky's 2-D Fourier transform.
+7) Many baselines fill the u-v plane (spatial-frequency plane).
+8) An inverse Fourier transform turns the measured visibilities into an image.
+9) Earth rotation changes the projected baselines, filling in more Fourier samples.
+
+This is intentionally an educational visualization, not a telescope simulator.
+Real radio interferometry also requires calibration, bandpass corrections,
+atmospheric/ionospheric corrections, weighting, gridding, deconvolution (e.g.
+CLEAN), primary-beam correction, and many other engineering/science steps.
 
 Official background references:
 - ALMA Interferometry:
