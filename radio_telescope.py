@@ -1088,5 +1088,36 @@ def write_summary(path: Path, audio_muxed: bool):
     }
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
+def main():
+    scene = RadioTelescopeExplainer()
 
+    silent_video = OUTPUT_ROOT / "radio_telescope_fourier_explainer_silent.mp4"
+    soundtrack = OUTPUT_ROOT / "radio_telescope_fourier_soundtrack.wav"
+    final_video = OUTPUT_ROOT / "radio_telescope_fourier_explainer.mp4"
+    subtitles = OUTPUT_ROOT / "radio_telescope_fourier_explainer.srt"
+    narration_txt = OUTPUT_ROOT / "radio_telescope_fourier_narration.txt"
+    summary_json = OUTPUT_ROOT / "radio_telescope_fourier_summary.json"
+    contact_sheet = PREVIEW_DIR / "contact_sheet.jpg"
+
+    print(f"Mode: {'QUICK' if QUICK_MODE else ('1080p' if FULLHD_MODE else '720p')}")
+    print(f"Video: {OUT_W}x{OUT_H}, {FPS} fps, {DURATION:.1f} s")
+
+    write_srt(NARRATION, subtitles)
+    write_narration(narration_txt)
+    save_contact_sheet(scene, contact_sheet)
+    render_video(scene, silent_video)
+    create_soundtrack(soundtrack, DURATION)
+    audio_muxed = mux_audio(silent_video, soundtrack, final_video)
+    write_summary(summary_json, audio_muxed)
+
+    print("\nRender complete")
+    print(f"Final video:   {final_video.resolve()}")
+    print(f"Subtitles:     {subtitles.resolve()}")
+    print(f"Narration:     {narration_txt.resolve()}")
+    print(f"Contact sheet: {contact_sheet.resolve()}")
+    print(f"Summary:       {summary_json.resolve()}")
+
+
+if __name__ == "__main__":
+    main()
 
