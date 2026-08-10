@@ -7,6 +7,8 @@ RADIO TELESCOPE + FOURIER TRANSFORM — A Very Easy Visual Explainer
 A self-contained, cinematic Python renderer inspired by a shot-based astronomy
 short workflow. It explains, visually and with beginner-friendly captions:
 
+Result : https://www.youtube.com/watch?v=CQXaZIVAZjw
+
 1) Radio light is just light with a long wavelength.
 2) A dish collects weak radio waves and focuses them into a receiver.
 3) A single dish has limited angular resolution: theta ~ 1.22 lambda / D.
