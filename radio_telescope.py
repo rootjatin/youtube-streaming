@@ -29,7 +29,7 @@ Official background references:
   https://www.almaobservatory.org/en/about-alma/how-alma-works/
 - NRAO Interferometry Explained:
   https://public.nrao.edu/interferometry-explained/
-  
+
 Usage
 -----
 Normal 720p render:
@@ -1114,6 +1114,7 @@ def write_summary(path: Path, audio_muxed: bool):
     }
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
+
 def main():
     scene = RadioTelescopeExplainer()
 
@@ -1146,4 +1147,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
