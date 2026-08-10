@@ -4,6 +4,15 @@ from __future__ import annotations
 RADIO TELESCOPE + FOURIER TRANSFORM — A Very Easy Visual Explainer
 ===================================================================
 
+
+Official background references:
+- ALMA Interferometry:
+  https://www.almaobservatory.org/en/about-alma/how-alma-works/technologies/interferometry/
+- ALMA How It Works:
+  https://www.almaobservatory.org/en/about-alma/how-alma-works/
+- NRAO Interferometry Explained:
+  https://public.nrao.edu/interferometry-explained/
+  
 Usage
 -----
 Normal 720p render:
