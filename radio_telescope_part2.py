@@ -115,7 +115,16 @@ COLORS = {
 }
 
 SHOT_PLAN_FULL: List[Tuple[str, float, float]] = [
-
+    ("hook", 0.0, 8.0),
+    ("voltages", 8.0, 19.0),
+    ("correlator", 19.0, 31.0),
+    ("calibration", 31.0, 43.0),
+    ("uv_sampling", 43.0, 57.0),
+    ("dirty_image", 57.0, 69.0),
+    ("clean", 69.0, 83.0),
+    ("final_image", 83.0, 93.0),
+    ("spectral_cube", 93.0, 105.0),
+    ("finale", 105.0, 112.0),
 ]
 
 NARRATION_FULL: List[Tuple[float, float, str]] = [
