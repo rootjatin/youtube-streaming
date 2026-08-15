@@ -32,7 +32,6 @@ The synthetic galaxy and measurements in this renderer are pedagogical, not a
 real calibrated observation. The numerical FFT/IFFT and simplified Högbom-like
 CLEAN are genuine mathematical operations used here to demonstrate the pipeline.
 
-
 Subtitle behavior
 -----------------
 Exactly ONE subtitle layer is burned into the MP4 by default. An optional SRT is
@@ -773,6 +772,7 @@ def write_summary(path: Path, audio_muxed: bool):
         ],
     }
     path.write_text(json.dumps(payload,indent=2),encoding="utf-8")
+
 
 def main():
     scene=RadioImagingExplainer()
