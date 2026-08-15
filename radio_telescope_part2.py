@@ -758,4 +758,5 @@ def main():
     print("Summary:",summary.resolve())
 
 
-
+if __name__=="__main__":
+    main()
