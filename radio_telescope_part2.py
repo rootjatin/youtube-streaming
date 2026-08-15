@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 """
+Result : https://www.youtube.com/watch?v=fpfenurw6uU
 HOW RADIO TELESCOPES RENDER IMAGES — Part 2
 ============================================
 
