@@ -11,6 +11,26 @@ This episode intentionally does NOT teach Fourier-transform / FFT mathematics.
 It only shows where the transform sits in the real imaging pipeline. A separate
 short can explain why Fourier transforms are the right mathematics.
 
+Scientific story
+----------------
+1) Antennas do not directly record a photograph; they record changing voltages.
+2) A correlator compares signals from pairs of antennas.
+3) Calibration removes instrumental/atmospheric amplitude and phase errors.
+4) Each antenna pair contributes a sample of spatial information (u-v data).
+5) Earth rotation and many baselines fill more of the u-v plane.
+6) An imaging transform converts the sampled measurements into a DIRTY IMAGE.
+7) Sparse sampling creates a DIRTY BEAM / sidelobe pattern.
+8) Deconvolution (illustrated with a simplified CLEAN-like process) removes much
+   of that point-spread response and restores a cleaner radio image.
+9) Pixel values represent measured radio brightness / flux-related quantities;
+   colors in published images are usually a visualization choice.
+10) Repeating imaging for many frequency channels creates a spectral cube:
+        sky X × sky Y × frequency
+    which can reveal gas motion through Doppler shifts.
+
+The synthetic galaxy and measurements in this renderer are pedagogical, not a
+real calibrated observation. The numerical FFT/IFFT and simplified Högbom-like
+CLEAN are genuine mathematical operations used here to demonstrate the pipeline.
 
 
 Subtitle behavior
