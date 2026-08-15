@@ -98,7 +98,20 @@ FRAME_COUNT = int(round(FPS * DURATION))
 AUDIO_RATE = 44100
 
 COLORS = {
-   
+    "bg0": (2, 5, 14),
+    "bg1": (8, 15, 30),
+    "white": (244, 248, 255),
+    "muted": (164, 181, 199),
+    "cyan": (89, 224, 245),
+    "blue": (105, 158, 255),
+    "gold": (246, 194, 92),
+    "violet": (172, 132, 240),
+    "pink": (246, 132, 188),
+    "green": (124, 228, 176),
+    "red": (244, 113, 118),
+    "dish": (191, 204, 218),
+    "grid": (77, 97, 122),
+    "ground": (26, 31, 40),
 }
 
 SHOT_PLAN_FULL: List[Tuple[str, float, float]] = [
