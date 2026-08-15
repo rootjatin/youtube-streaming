@@ -732,4 +732,30 @@ def write_summary(path: Path, audio_muxed: bool):
     }
     path.write_text(json.dumps(payload,indent=2),encoding="utf-8")
 
+def main():
+    scene=RadioImagingExplainer()
+    silent=OUTPUT_ROOT/"how_radio_telescope_renders_images_silent.mp4"
+    audio=OUTPUT_ROOT/"how_radio_telescope_renders_images_soundtrack.wav"
+    final=OUTPUT_ROOT/"how_radio_telescope_renders_images.mp4"
+    srt=SUBTITLE_DIR/"part2_optional_subtitles.srt"
+    narration=OUTPUT_ROOT/"how_radio_telescope_renders_images_narration.txt"
+    summary=OUTPUT_ROOT/"how_radio_telescope_renders_images_summary.json"
+    contact=PREVIEW_DIR/"contact_sheet.jpg"
+
+    write_srt(NARRATION,srt)
+    write_narration(narration)
+    save_contact_sheet(scene,contact)
+    render_video(scene,silent)
+    create_soundtrack(audio,DURATION)
+    muxed=mux_audio(silent,audio,final)
+    write_summary(summary,muxed)
+
+    print("Render complete")
+    print("Video:",final.resolve())
+    print("Contact sheet:",contact.resolve())
+    print("Narration:",narration.resolve())
+    print("Optional SRT:",srt.resolve())
+    print("Summary:",summary.resolve())
+
+
 
